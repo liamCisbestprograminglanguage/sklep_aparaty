@@ -1,0 +1,184 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+#content-area {
+    margin-top: 50px;
+}
+
+.navbar {
+    background-color: #454;
+    color: white;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    left: 0;
+}
+
+.navbar button {
+    background-color: #565;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    position: absolute;
+    left: 10px;
+}
+
+.navbar button:hover {
+    background-color: #787;
+    transform: scale(1.1);
+}
+
+.navbar-title {
+    margin: 0;
+    font-size: 1.5em;
+    color: white;
+}
+
+.search-container {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 10px;
+}
+
+.search-input {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    font-size: 0.9em;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #555;
+}
+
+/*/ side navbar /*/
+
+.side-navbar {
+    position: absolute;
+    top: 50px;
+    left: 0;
+    right: 0;
+    background-color: #343;
+    color: #eee;
+    transform: translateY(-100%);
+    transition: transform 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.side-navbar ul {
+    display: flex;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.side-navbar li {
+    flex: 1;
+    text-align: center;
+    padding: 10px 0;
+    list-style: none;
+}
+
+.side-navbar ul li a {
+    color: #eee
+}
+
+.side-navbar.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/*/ producenci /*/
+
+.producenci-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.producent {
+    text-align: center;
+    background-color: #e4e4e4;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    padding: 5px;
+    transition: transform 0.3s ease;
+}
+
+.producent img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.producent h3 {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+/*/ prod_prod /*/
+
+.producent_prod {
+    background-color: #e7e7e7;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+}
+
+.producent_prod h2 {
+    font-size: 24px;
+    color: #333;
+    text-align: center;
+}
+
+.producent_prod p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+}
+
+.producent_prod a {
+    color: rgb(30, 108, 192);
+    text-decoration: none;
+}
+
+.producent_prod a:hover {
+    text-decoration: underline;
+}
+
+
+.producent-image {
+    text-align: center;
+    margin: 15px 0;
+}
+
+.producent-image img {
+    max-width: 150px;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
